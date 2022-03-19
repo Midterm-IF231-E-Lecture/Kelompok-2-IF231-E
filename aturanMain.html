@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UMNLife</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"  href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+</head>
+
+<body onload="currentTime()">
+	<div class="container">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col text-center mt-4">
+					<img src="assets/trophy.png" class="img-fluid" id="trophies">
+					<p>Mid Exam</p>
+					<hr id="midExamline">
+						<div id="umnLife">
+							<div>
+								<p class="text-center">THe GaMe oF LiFe</p>
+							</div>
+						</div>
+					<div id="trophyBorder" class="row justify-content-center">
+						<hr id="trophyBorder">
+					</div>
+				</div>
+			</div>
+
+            <div>
+                <div>
+                    <h1 class="text-center mt-3">Aturan Main</h1>
+                </div>
+                <div class="container">
+                    <div id="rulesList" class="w-75 mx-auto my-4">
+						<div class="p-3 mb-2 rounded-3 bgBox">
+							<ul>
+								<li>
+									1 Menit didalam game = 1 detik di dunia nyata.
+								</li>
+								<li>
+									Ada 6 status yang harus kamu lihat, yaitu: Makan, Minum, Tidur, Bermain, Olahraga, dan Belajar.
+								</li>
+								<li>
+									Jika salah satu dari status bar habis, maka akan ada konsekuensi yang akan di dapatkan.
+								</li>
+								<li>
+									Semester akan bertambah ketika status belajar penuh.
+								</li>
+								<li>
+									Game akan berakhir ketika status belajar kosong untuk waktu yang lama.
+								</li>
+								<li>
+									Ketika ada status yang belum ditambahkan (contoh: makan) didalam waktu tertentu, maka status tersebut akan berkurang.
+								</li>
+								<li>
+									Have fun!
+								</li>
+							</ul>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-sm rounded-pill mt-2 bgBox">
+								<a href="mulaiMain.html">Kembali</a>
+							</button>
+						</div>
+					</div>
+                </div>  
+				<footer>
+					<div>
+						<h3>Made by Kelompok 2</h3>
+					</div>
+					<div>Current Time:</div>			
+					<div id="clock"></div>
+				</footer>      
+            </div>
+        </div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script>
+		function currentTime() {
+			const today = new Date();
+			h = today.getHours();
+			m = today.getMinutes();
+			s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+			setTimeout(startTime, 1000);
+		}
+	
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};
+			return i;
+		}
+	</script>
+</body>
+</html>
